@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pig Latin Translator</title>
+    <title>English to Pig Latin Translator</title>
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <script src="game.js" defer></script> 
+    <style>
+        body {
+            background: linear-gradient(to top right, rgba(255, 0, 0, 1), rgba(255, 255, 255, 1));
+        }
+    </style>
 </head>
-<body>
-    
+<body class="flex flex-col h-screen">
+
+    <div class="flex-1 flex items-center justify-center p-4">
+        <div class="w-full max-w-lg bg-white bg-opacity-90 rounded-lg shadow-lg p-4">
+            <h1 class="text-3xl font-bold text-center mb-4">English to Pig Latin Translator</h1>
+            <textarea id="inputText" placeholder="Enter English text here..." rows="4" class="border border-gray-300 rounded-md p-2 w-full mb-4"></textarea>
+            <button id="translateButton" class="bg-red-500 text-white rounded-md py-2 px-4 w-full hover:bg-blue-600">Translate</button>
+        </div>
+    </div>
+
+    <div class="flex-1 flex items-center justify-center p-4">
+        <div class="w-full max-w-lg bg-white bg-opacity-90 rounded-lg shadow-lg p-4">
+            <h2 class="text-2xl font-bold text-center mb-4">Translation</h2>
+            <p id="result" class="mt-4 text-lg text-center"></p>
+        </div>
+    </div>
 </body>
 </html>
